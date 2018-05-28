@@ -1,0 +1,9 @@
+name: "Build WASM"
+cmd: node
+args:
+  - build
+  - "{FILE_ACTIVE}"
+sh: false
+atomCommandName: wasm:build
+errorMatch:
+  - "^(?<file>\\S*):(?<line>\\d+):(?<col>\\d+):\\s*error:\\s+(?<message>.+)"

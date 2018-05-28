@@ -1,0 +1,25 @@
+╔════╤════╤════╤════╦════╤════╤════╤════╦══┄
+║  X │  Y │ dX │ dY ║  X │  Y │ dX │ dY ║  ...
+╚════╧════╧════╧════╩════╧════╧════╧════╩══┄
+├────┤              ├───────────────────┤
+float32                  4 x 4 = 16b
+
+===
+
+const wasmInstance = new WebAssembly.Instance(wasmModule);
+console.log(Date(), '\n', wasmInstance.exports.answer());
+
+===
+
+(module
+	(func (result i32)
+
+	)
+	(export "answer" (func 0))
+)
+
+===
+
+7 5 1 + *
+7 * (5 + 1)
+(* 7 (+ 5 1))
